@@ -1,4 +1,3 @@
-from pyexpat import model
 import common
 from model import arithmetic_operations
 from model.arithmetic_expression import ArithmeticExpression

@@ -70,7 +70,7 @@ class Exponentiation(ArithmeticOperation):
 operations_set: set[ArithmeticOperation] = (
     Exponentiation, Multiplication, Division, Addition, Substraction)
 
-# словарь { значёк операции : модель операции }
+# словарь { значок операции : модель операции }
 operations_by_sign = {op_model.SIGN: op_model for op_model in operations_set}
 
 available_operation_signs = list(map(lambda op: op.SIGN, operations_set))
@@ -79,12 +79,12 @@ def is_valid_sign(operation_sign):
     return operation_sign in available_operation_signs
 
 # ============== VVV делегировано AritmneticExpression VVV ================================
-# # словарь словарей { приоритет : { значёк операции : модель операции } },
-# # в котором пары {значёк:операция} ранжированы по приоритемам
+# # словарь словарей { приоритет : { значок операции : модель операции } },
+# # в котором пары {значок:операция} ранжированы по приоритемам
 # operations_by_priority = {priority: {op.SIGN: op for op in operations_set if op.PRIORITY == priority}
 #                           for priority in set([o.PRIORITY for o in operations_set])}
 
-# # список словарей { значёк операции : модель операции } отсортированный по возрастанию PRIORITY
+# # список словарей { значок операции : модель операции } отсортированный по возрастанию PRIORITY
 # # (операции с меньшим приоритетом выполняются раньше операций с большим приоритетом)
 # operations_by_priority_asc = [{op.SIGN: op for op in operations_set if op.PRIORITY == pr}
 #                               for pr in sorted(set([o.PRIORITY for o in operations_set]))]

@@ -1,6 +1,6 @@
 import common
 from common import Console as Con
-from common import ForeColor, BackColor
+from common import ForeColor
 
 
 class view_settings:
